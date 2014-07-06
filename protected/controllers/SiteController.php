@@ -31,7 +31,7 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 
 		// $usr = $this->module->userIndentityClass; exit();
-		
+		$this->redirect(Yii::app()->user->loginUrl);
 		$this->render('index');
 	}
 
