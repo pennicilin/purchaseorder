@@ -69,6 +69,9 @@ class InquiriesController extends Controller
 
 		if(isset($_POST['Inquiries']))
 		{
+			
+			$this->is_declined($_POST); exit();
+
 			$model->attributes=$_POST['Inquiries'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
@@ -181,5 +184,11 @@ class InquiriesController extends Controller
 		}
 	}*/
 
+	private function is_declined($info=array())
+	{
+		# code...
+
+		var_dump($info);
+	}
 	
 }

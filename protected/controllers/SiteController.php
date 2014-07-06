@@ -31,8 +31,7 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 
 		// $usr = $this->module->userIndentityClass; exit();
-		$user = Yii::app()->user;
-		echo !$user->isGuest; exit();
+		
 		$this->render('index');
 	}
 
